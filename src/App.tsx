@@ -5,6 +5,7 @@ import Products from "./customer/pages/Product/Products"
 import Footer from "./customer/Footer/Footer"
 import ProductDetails from "./customer/pages/Product/ProductDetails/ProductDetails"
 import Cart from "./customer/pages/Cart/Cart"
+import CheckOut from "./customer/pages/Checkout/CheckOut"
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
       {/* <Products/> */}
       {/* <ProductDetails/> */}
       {/* <Footer/> */}
-      <Cart/>
+      {/* <Cart/> */}
+      <CheckOut/>
     </ThemeProvider>
   )
 }
