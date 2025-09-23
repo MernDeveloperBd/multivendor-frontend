@@ -1,3 +1,5 @@
+
+import BecomeASeller from "../../components/BecomeASellerBanner/BecomeASeller";
 import Deal from "./Deal/Deal";
 import Grid from "./Grid/Grid";
 import HomeCategory from "./HomeCategory/HomeCategory";
@@ -16,6 +18,9 @@ const Home = () => {
             </section>
             <section>
                 <HomeCategory />
+            </section>
+            <section>
+                    <BecomeASeller/>
             </section>
         </div>
     );
