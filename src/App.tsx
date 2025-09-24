@@ -9,23 +9,33 @@ import CheckOut from "./customer/pages/Checkout/CheckOut"
 import Navbar from "./customer/Navbar/Navbar"
 import Profile from "./customer/pages/Order/Profile"
 import { Route, Routes } from "react-router"
+import SellerDashboard from "./Seller/SellerDashboard/SellerDashboard"
+import HomePage from "./Seller/HomePage/HomePage"
 
 function App() {
 
 
   return (
     <ThemeProvider theme={customeTheme}>
-      <Navbar />
+
+      {/* seller routes */}
       <Routes>
+        <Route path="/seller/*" element={<SellerDashboard />} />      
+      </Routes>
+      {/* <SellerDashboard/> */}
+
+      {/* customer routes */}
+      {/* <Navbar /> */}
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products/:categoryId" element={<Products />} />
         <Route path="/product-details/:categoryId/:name/:productId" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout/address" element={<CheckOut />} />
         <Route path="/account/*" element={<Profile />} />
-      </Routes>
+      </Routes> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </ThemeProvider>
   )
 }
