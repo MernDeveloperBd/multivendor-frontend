@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import './productCard.css'
+import { useNavigate } from "react-router";
 
 const ProductCard = ({ item }: any) => {
-    const [currentImage, setCurrentImage] = useState(3)
+    const [currentImage, setCurrentImage] = useState(0)
     const [isHovered, setIsHovered] = useState(false);
+    const navigate = useNavigate()
 
     useEffect(() => {
         let interval: any;
@@ -16,11 +18,11 @@ const ProductCard = ({ item }: any) => {
     }, [isHovered, item.images.length]);
 
     return (
-        <div className="group px-3 relative">
+        <div onClick={()=>navigate(`/product-details/${1}/${"three-piece"}/${2}`)} className="group px-3 relative">
             <div
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                className="relative w-full h-[260px] overflow-hidden">
+                className="relative w-full h-[260px] overflow-hidden cursor-pointer">
                 {
                     item?.images?.map((image: string, index: number) => <img key={index}
                         src={image}
@@ -33,22 +35,22 @@ const ProductCard = ({ item }: any) => {
             </div>
             {/* details */}
             <div className="details pt-3 space-y-1 group-hover-effect rounded-md">
-                    <div className="name space-y">
-                        <h1 className="font-semibold text-md">
-                            {item?.seller?.businessDetails?.businessName}
-                        </h1>
-                        <p className="text-base">Fashional party dress</p>
-                    </div>
-                    <div className="price flex items-center gap-3 ">
-                        <span className="font-semibold text-teal-600 text-[14px]">TK 1500</span>
-                        <span className="text font-thin line-through text-gray-500 text-[12px]">TK 1700</span>
-                        <span className="font-semibold text-teal-700 text-[14px]">12% off</span>
-                    </div>
-                    <div className="price flex items-center gap-3 ">
-                        <span className="font-semibold text-teal-600 text-[14px]">Ratings</span>
-                        <span className="font-semibold text-violet-700 text-[12px]">Reselling:TK 1200</span>
-                        
-                    </div>
+                <div className="name space-y">
+                    <h1 className="font-semibold text-md">
+                        {item?.seller?.businessDetails?.businessName}
+                    </h1>
+                    <p className="text-base">Fashional party dress</p>
+                </div>
+                <div className="price flex items-center gap-3 ">
+                    <span className="font-semibold text-teal-600 text-[14px]">TK 1500</span>
+                    <span className="text font-thin line-through text-gray-500 text-[12px]">TK 1700</span>
+                    <span className="font-semibold text-teal-700 text-[14px]">12% off</span>
+                </div>
+                <div className="price flex items-center gap-3 ">
+                    <span className="font-semibold text-teal-600 text-[14px]">Ratings</span>
+                    <span className="font-semibold text-violet-700 text-[12px]">Reselling:TK 1200</span>
+
+                </div>
             </div>
         </div>
     );

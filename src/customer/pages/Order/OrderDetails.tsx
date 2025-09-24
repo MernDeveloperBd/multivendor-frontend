@@ -6,7 +6,7 @@ const OrderDetails = () => {
     return (
         <Box className="space-y-5">
             <section className="flex flex-col gap-5 justify-center items-center">
-                <img className="w-[70px]" src="https://res.cloudinary.com/dpd5xwjqp/image/upload/v1752324558/products/gt2pout8feanpscvl9ev.jpg" alt="order details image" />
+                <img className="w-[90px] rounded" src="https://res.cloudinary.com/dpd5xwjqp/image/upload/v1752324558/products/gt2pout8feanpscvl9ev.jpg" alt="order details image" />
                 <div className="text-sm space-y-1 text-center">
                     <h1>{"MM Fashion world"}</h1>
                     <p>{"fashionable dress cootondf titl"}</p>

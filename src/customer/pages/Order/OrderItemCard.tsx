@@ -1,10 +1,12 @@
 import { ElectricBolt } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
+import { useNavigate } from "react-router";
 
 
 const OrderItemCard = () => {
+    const navigate = useNavigate()
     return (
-        <div className="text-sm bg-white p-5 space-y-4 border border-gray-200 rounded-md cursor-pointer">
+        <div onClick={()=>navigate(`/account/orders/1/item/1`)} className="text-sm bg-white p-5 space-y-4 border border-gray-200 rounded-md cursor-pointer">
             <div className="flex items-center gap-3">
                 <div>
                     <Avatar sizes="small" sx={{ bgcolor: "#00927C" }}>

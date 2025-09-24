@@ -1,6 +1,8 @@
+
 import OrderItemCard from "./OrderItemCard";
 
 const Order = () => {
+    
     return (
         <div className='text-sm min-h-screen'>
             <div className='pb-5'>
@@ -8,11 +10,11 @@ const Order = () => {
                 <p>From anytime</p>
             </div>
             <div className="space-y-2">
-        {
-            [1,2,3].map((item, index)=><OrderItemCard key={index}/>)
-        }
+                {
+                    [1, 2, 3].map((item, index) => <OrderItemCard  key={index} />)
+                }
             </div>
-            
+
         </div>
     );
 };
