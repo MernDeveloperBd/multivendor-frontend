@@ -62,7 +62,7 @@ const AddressForm = () => {
             onChange={formik.handleChange}
             />          
           </Grid2>
-            <Grid2 size={{ xs: 12 }}>
+            <Grid2 size={{ xs: 6 }}>
             <TextField
               fullWidth
               required
@@ -94,7 +94,7 @@ const AddressForm = () => {
             />          
           </Grid2>
          
-          <Button type="submit" fullWidth variant="contained" color="primary">
+          <Button type="submit" variant="contained" color="primary">
               Save Address
             </Button>
         </Grid2>

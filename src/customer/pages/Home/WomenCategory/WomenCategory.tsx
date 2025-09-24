@@ -49,7 +49,7 @@ const womenFashionCategories=[
 
 const WomenCategory = () => {
   return (
-    <div className="flex flew-wrap justify-between py-5 lg:px-20 border-b">
+    <div className="flex flew-wrap justify-between py-5 lg:px-12 border-b border-gray-300">
       {
         womenFashionCategories?.map((item, index) =><WomenCategoryCard key={index} item={item}/>)
       }

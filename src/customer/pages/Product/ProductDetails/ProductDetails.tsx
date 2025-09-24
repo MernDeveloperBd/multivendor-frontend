@@ -19,7 +19,7 @@ const ProductDetails = () => {
     const handleChangeCurrentImage = (index: number) => setCurrentImage(index)
     const handleChangeQuantity = (value: number) => setQuantity(value + quantity)
     return (
-        <div className="min-h-screen px-5 lg:px-20 pt-10">
+        <div className="min-h-screen px-5 lg:px-12 pt-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <section className="flex flex-col lg:flex-row gap-5">
                     <div className="w-full lg:w-[15%] flex flex-wrap lg:flex-col gap-3">

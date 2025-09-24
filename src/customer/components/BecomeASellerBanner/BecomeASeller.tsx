@@ -3,7 +3,7 @@ import StoreIcon from '@mui/icons-material/Store';
 
 const BecomeASeller = () => {
     return (
-         <section className="lg:px-20 relative h-[200px] lg:h-[450px] object-cover">
+         <section className="lg:px-12 relative h-[200px] lg:h-[450px] object-cover">
                 <img src="https://res.cloudinary.com/dpd5xwjqp/image/upload/v1758601022/mm_fashion_world_-_online_shopping_platform_1_r8ehmv.jpg" alt="become_a_seller" />
                 <div className="absolute top-1/2 left-4 lg:left-[15rem] transform -translate-y-1/2 font-semibold lg:text-4xl space-y-3">
                 <h1>Sell your products</h1>

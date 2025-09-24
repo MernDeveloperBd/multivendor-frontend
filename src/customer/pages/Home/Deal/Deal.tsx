@@ -16,7 +16,7 @@ const Deal = () => {
         
     };
     return (
-        <div className="lg:px-20">
+        <div className="lg:px-12">
             <h2 className="text-2xl py-2 text-center font-bold mb-4">Todays Deal</h2>
             <div className="slide-container">
                 <Slider {...settings}>
