@@ -79,7 +79,7 @@ const SellerDrawerList = () => {
                                     {
                                         location.pathname === item.path ? item.activeIcon : item.icon
                                     }
-                                    {/* {item.icon} */}
+                                   
                                 </ListItemIcon>
                                 <ListItemText primary={item.name} />
                             </ListItemButton>
