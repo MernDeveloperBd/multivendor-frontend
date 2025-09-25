@@ -11,6 +11,8 @@ import Profile from "./customer/pages/Order/Profile"
 import { Route, Routes } from "react-router"
 import SellerDashboard from "./Seller/SellerDashboard/SellerDashboard"
 import HomePage from "./Seller/HomePage/HomePage"
+import CustomerRoute from "./router/CustomerRoute"
+import BecomeSeller from "./Auth/BecomeSeller/BecomeSeller"
 
 function App() {
 
@@ -20,7 +22,9 @@ function App() {
 
       {/* seller routes */}
       <Routes>
+        <Route path="/become-seller" element={<BecomeSeller />} />      
         <Route path="/seller/*" element={<SellerDashboard />} />      
+        <Route path="/" element={<CustomerRoute />} />      
       </Routes>
       {/* <SellerDashboard/> */}
 

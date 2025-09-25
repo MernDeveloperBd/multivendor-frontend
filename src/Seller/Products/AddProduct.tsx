@@ -74,9 +74,9 @@ const AddProduct = () => {
             shopName: "",
             facebookURL: "",
             images: [], // Start with empty array
-            category: "",
-            category2: "",
-            category3: "",
+            category: null, // Changed to null
+            category2: null, // Changed to null
+            category3: null, // Changed to null
         },
         onSubmit: (values) => {
             console.log("Form submitted:", values);
@@ -109,6 +109,7 @@ const AddProduct = () => {
 
     return (
         <div className="p-1">
+            <h1 className="text-xl font-bold py-4">Add Product</h1>
             <form onSubmit={formik.handleSubmit}>
                 <Grid2 container spacing={2}>
                     {/* Image Upload Section */}
@@ -277,15 +278,15 @@ const AddProduct = () => {
                                 labelId="category-label"
                                 id="category"
                                 name="category"
-                                value={formik.values.category}
+                                value={formik.values.category || ''}
                                 label="Category"
                                 onChange={(e) => {
-                                    formik.setFieldValue('category', e.target.value);
-                                    formik.setFieldValue('category2', '');
-                                    formik.setFieldValue('category3', '');
+                                    formik.setFieldValue('category', e.target.value || null);
+                                    formik.setFieldValue('category2', null);
+                                    formik.setFieldValue('category3', null);
                                 }}
                             >
-                                <MenuItem value="">None</MenuItem>
+                                <MenuItem value={null}>None</MenuItem>
                                 {mainCategory.map((item, index) => (
                                     <MenuItem key={index} value={item.categoryId}>
                                         {item.name}
@@ -301,14 +302,14 @@ const AddProduct = () => {
                                 labelId="category2-label"
                                 id="category2"
                                 name="category2"
-                                value={formik.values.category2}
+                                value={formik.values.category2 || ''}
                                 label="Second Category"
                                 onChange={(e) => {
-                                    formik.setFieldValue('category2', e.target.value);
-                                    formik.setFieldValue('category3', '');
+                                    formik.setFieldValue('category2', e.target.value || null);
+                                    formik.setFieldValue('category3', null);
                                 }}
                             >
-                                <MenuItem value="">None</MenuItem>
+                                <MenuItem value={null}>None</MenuItem>
                                 {formik.values.category && (
                                     (() => {
                                         const key = categoryKeyMapping[formik.values.category];
@@ -330,11 +331,11 @@ const AddProduct = () => {
                                 labelId="category3-label"
                                 id="category3"
                                 name="category3"
-                                value={formik.values.category3}
+                                value={formik.values.category3 || ''}
                                 label="Third Category"
                                 onChange={formik.handleChange}
                             >
-                                <MenuItem value="">None</MenuItem>
+                                <MenuItem value={null}>None</MenuItem>
                                 {formik.values.category2 && (
                                     (() => {
                                         const mainCategoryKey = categoryThreeKeyMapping[formik.values.category];
@@ -366,7 +367,7 @@ const AddProduct = () => {
                                 labelId="size-label"
                                 id="size"
                                 name="size"
-                                value={formik.values.size}
+                                value={formik.values.size || ''}
                                 label="Size"
                                 onChange={formik.handleChange}
                             >
@@ -434,7 +435,7 @@ const AddProduct = () => {
                 <div className="mt-6">
                     <button
                         type="submit"
-                        className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition duration-300 cursor-pointer"
+                        className="w-full py-3 px-4 bg-teal-700 hover:bg-teal-800 text-white font-medium rounded-md transition duration-300 cursor-pointer"
                     >
                         Add Product
                     </button>

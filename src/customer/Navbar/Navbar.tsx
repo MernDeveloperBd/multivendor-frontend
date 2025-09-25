@@ -53,7 +53,7 @@ const Navbar = () => {
                         <IconButton onClick={() => navigate("/cart")}>
                             <ShoppingCart sx={{ fontSize: 20 }} />
                         </IconButton>
-                        <h3 className="border border-teal-500 px-2 py-1 rounded-md hover:bg-teal-700 cursor-pointer hover:text-white transition-all duration-500">Become a seller</h3>
+                        <h3 onClick={()=>navigate('/become-seller')} className="border border-teal-500 px-2 py-1 rounded-md hover:bg-teal-700 cursor-pointer hover:text-white transition-all duration-500">Become a seller</h3>
                     </div>
                 </div>
                 {
