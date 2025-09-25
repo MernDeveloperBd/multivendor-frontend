@@ -42,7 +42,7 @@ const Navbar = () => {
                         <IconButton>
                             <Search sx={{ fontSize: 22 }} />
                         </IconButton>
-                        {false ? <Button onClick={()=>navigate('/account')} className="flex gap-1 items-center" ><Avatar src="https://res.cloudinary.com/dpd5xwjqp/image/upload/v1752324558/products/gt2pout8feanpscvl9ev.jpg" sx={{ width: 25, height: 25 }} /><h2>MM Fashion</h2></Button>
+                        {true ? <Button onClick={()=>navigate('/account')} className="flex gap-1 items-center" ><Avatar src="https://res.cloudinary.com/dpd5xwjqp/image/upload/v1752324558/products/gt2pout8feanpscvl9ev.jpg" sx={{ width: 25, height: 25 }} /><h2>MM Fashion</h2></Button>
                          : 
                          <Button onClick={()=>navigate('/login')} variant="contained" size="small" startIcon={<AccountCircle />}>
                             Login

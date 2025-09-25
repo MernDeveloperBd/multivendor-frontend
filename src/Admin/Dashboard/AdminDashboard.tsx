@@ -1,13 +1,13 @@
 // SellerDashboard.tsx
 import { useState, useEffect } from 'react';
 import { Box, CssBaseline, Drawer } from '@mui/material';
-import SellerDrawerList from '../Sidebar/SellerDrawerList';
 import Navbar from '../../Common/Navbar';
-import SellerRoutes from '../../router/SellerRouter';
+import AdminDrawerList from '../Sidebar/AdminDrawerList';
+import AdminRoutes from '../../router/AdminRoutes';
 
 const drawerWidth = 240;
 
-const SellerDashboard = () => {
+const AdminDashboard = () => {
   const [drawerOpen, setDrawerOpen] = useState(true);
   const [isClient, setIsClient] = useState(false);
 
@@ -32,11 +32,8 @@ const SellerDashboard = () => {
         component="nav"
         sx={{ 
           width: { sm: drawerOpen ? drawerWidth : 0 }, // Dynamic width
-          flexShrink: 0, // Don't shrink on small screens
-          transition: 'width 0.3s ease', // Smooth transition
-          display: 'flex',
-          flexDirection: 'column',
-          overflow: 'hidden'
+          flexShrink: 0,
+          transition: 'width 0.3s ease' // Smooth transition
         }}
         aria-label="mailbox folders"
       >
@@ -58,7 +55,7 @@ const SellerDashboard = () => {
               },
             }}
           >
-            <SellerDrawerList />
+            <AdminDrawerList />
           </Drawer>
         )}
 
@@ -80,7 +77,7 @@ const SellerDashboard = () => {
           }} 
           open
         >
-          <SellerDrawerList />
+          <AdminDrawerList />
         </Drawer>
       </Box>
 
@@ -90,19 +87,19 @@ const SellerDashboard = () => {
           flexGrow: 1, 
           pt: 10, 
           px: 3,
-          // Main content always takes remaining space
-          width: '100%', // No calc, let flex do the work
-          transition: 'margin 0.3s ease', // Optional: if you want to animate margin too
+          // Corrected styles - no negative margin
+          width: '100%', // Always 100% of remaining space
+          transition: 'margin 0.3s ease', // Smooth transition
           height: '100vh',
           overflow: 'auto',
           bgcolor: 'background.default'
         }} 
       >      
         {/* Outlet content */}
-        <SellerRoutes/>
+        <AdminRoutes/>
       </Box>
     </Box>
   );
 };
 
-export default SellerDashboard;
+export default AdminDashboard;

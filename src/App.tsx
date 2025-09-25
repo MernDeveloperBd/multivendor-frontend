@@ -14,6 +14,7 @@ import HomePage from "./Seller/HomePage/HomePage"
 import CustomerRoute from "./router/CustomerRoute"
 import BecomeSeller from "./Auth/BecomeSeller/BecomeSeller"
 import Auth from "./Auth/Login/Auth"
+import AdminDashboard from "./Admin/Dashboard/AdminDashboard"
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/become-seller" element={<BecomeSeller />} />      
         <Route path="/seller/*" element={<SellerDashboard />} />      
+        <Route path="/admin/*" element={<AdminDashboard />} />      
         <Route path="/login" element={<Auth />} />      
         <Route path="/*" element={<CustomerRoute />} />      
       </Routes>
