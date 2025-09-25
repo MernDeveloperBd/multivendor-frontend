@@ -1,10 +1,12 @@
+import TransactionTable from "./TransactionTable";
 
 
 const Transaction = () => {
     return (
-        <div>
-            Transaction page
-        </div>
+        <>
+            <h1 className="pb-5 font-bold text-xl">Transactions</h1>
+            <TransactionTable/>
+        </>
     );
 };
 

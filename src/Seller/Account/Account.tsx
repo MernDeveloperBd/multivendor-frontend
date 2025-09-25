@@ -1,9 +1,10 @@
+import SellerProfile from "./SellerProfile";
 
 
 const Account = () => {
     return (
-        <div>
-            Account page
+        <div className=" overflow-y-auto">
+            <SellerProfile/>
         </div>
     );
 };

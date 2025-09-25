@@ -1,10 +1,12 @@
+import ProductTable from "./ProductTable";
 
 
 const Products = () => {
     return (
-        <div>
-            products heer
-        </div>
+      <>
+      <h1 className="pb-5 font-bold text-xl">All Products</h1>
+      <ProductTable/>
+      </>
     );
 };
 
