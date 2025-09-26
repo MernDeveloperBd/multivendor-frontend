@@ -2,10 +2,13 @@ import { useState } from "react";
 import SellerLogin from "./SellerLogin";
 import SellerAccountForm from "./SellerAccountForm";
 import { Button } from "@mui/material";
+import { Home } from "@mui/icons-material";
+import { useNavigate } from "react-router";
 
 
 const BecomeSeller = () => {
     const [isLogin, setIsLogin] = useState(false);
+    const navigate = useNavigate()
 
     return (
         <div className="grid md:gap-10 grid-cols-3 min-h-screen px-4">
@@ -23,6 +26,9 @@ const BecomeSeller = () => {
                             isLogin ? "Register" : "Login"
                         }
                     </Button>
+                </div>
+                <div className="flex justify-center items-center mt-2">
+                    <Button onClick={()=> navigate('/')}  variant="contained"><Home/>Go Back Home</Button>
                 </div>
             </section>
 

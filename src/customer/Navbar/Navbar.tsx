@@ -1,4 +1,4 @@
-import { AccountCircle, FavoriteBorder, Menu, Search, ShoppingCart, Storefront } from "@mui/icons-material";
+import { AccountCircle, FavoriteBorder, Menu, Search, ShoppingCart } from "@mui/icons-material";
 import { Avatar, Box, Button, IconButton, useMediaQuery, useTheme } from "@mui/material";
 import { mainCategory } from "../../data/category/mainCategory";
 import { useState } from "react";
@@ -13,7 +13,7 @@ const Navbar = () => {
     const [selectedCategory, setSelectedCategory] = useState("women")
     const navigate = useNavigate()
     return (
-        <div className="sticky top-0 left-0 bg-white blur-bg bg-opacity-80">
+        <div className="sticky top-0 left-0 bg-white blur-bg bg-opacity-80 z-40">
             <Box >
                 <div className="flex items-center justify-between px-5 lg:px-12 h-[60px] border-b border-gray-200">
                     <div className="flex items-center gap-3">

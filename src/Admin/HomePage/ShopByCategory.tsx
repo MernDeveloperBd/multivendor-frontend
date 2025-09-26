@@ -1,9 +1,11 @@
-import React from 'react';
+import HomeCategoryTable from "./HomeCategoryTable";
+
+const image = "https://res.cloudinary.com/dpd5xwjqp/image/upload/v1752309930/products/oinuzef1irapuysskkba.jpg";
 
 const ShopByCategory = () => {
     return (
         <div>
-            Shop by category
+            <HomeCategoryTable image={image}/>
         </div>
     );
 };

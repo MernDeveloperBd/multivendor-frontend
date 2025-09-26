@@ -48,7 +48,7 @@ const SellerAccountForm = () => {
         }
     })
     return (
-        <div className="px-4">
+        <div className="px-4">            
             <Stepper activeStep={activeStep} alternativeLabel>
                 {
                     steps.map((label, index) => (
@@ -58,14 +58,14 @@ const SellerAccountForm = () => {
                     ))
                 }
             </Stepper>
-            <div className="mt-12 space-y-8">
+            <div className="mt-6 space-y-4">
                 {
                     activeStep == 0 ? (<BecomeSellerStep1 formik={formik}/>) :
                         activeStep == 1 ? (<BecomeSellerStep2 formik={formik}/>) :
                             activeStep == 2 ? (<BecomeSellerStep3 formik={formik}/>) : (<BecomeSellerStep4 formik={formik}/>)
                 }
             </div>
-            <div className="flex items-center justify-between mt-5">
+            <div className="flex items-center justify-between mt-4">
                 <Button 
                 variant="contained" 
                 disabled={activeStep === 0} 
